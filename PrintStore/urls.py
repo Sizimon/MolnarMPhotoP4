@@ -6,5 +6,5 @@ from .views import index_view, production_view
 
 urlpatterns = [
     path('', index_view, name='index'),
-    path('', production_view, name='production'),
+    path('production', production_view, name='production'),
 ]
