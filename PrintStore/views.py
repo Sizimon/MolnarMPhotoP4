@@ -11,3 +11,8 @@ def index_view(request):
 def production_view(request):
 
     return render(request, 'production.html')
+
+
+def artsy_view(request):
+
+    return render(request, 'artsy.html')
