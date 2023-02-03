@@ -143,7 +143,9 @@ a {
 }
 
 .option-bg-img1,
-.option-bg-img2 {
+.option-bg-img2,
+.option-bg-img3,
+.option-bg-img4 {
     height: 60vh;
     display: grid;
     align-items: center;
@@ -157,6 +159,18 @@ a {
 
 .option-bg-img2 {
     background-image: url(../img/other1.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.option-bg-img3 {
+    background-image: url(../img/urban1.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.option-bg-img4 {
+    background-image: url(../img/urban2.JPG);
     background-position: center center;
     background-size: cover;
 }

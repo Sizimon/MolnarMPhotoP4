@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 
+# Template Views
+
 
 def index_view(request):
 
@@ -16,3 +18,8 @@ def production_view(request):
 def artsy_view(request):
 
     return render(request, 'artsy.html')
+
+
+def contact_view(request):
+
+    return render(request, 'contact.html')
