@@ -216,3 +216,10 @@ input:-webkit-autofill:active {
   transition: background-color 9999s ease-in-out 0s;
   -webkit-text-fill-color: #9A9A9A;
 }
+
+/* REGISTRATION-LOGIN STYLES */
+
+.signup-login-margin {
+    margin-top: 10%;
+    color: white;
+}
