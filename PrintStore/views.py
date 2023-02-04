@@ -10,14 +10,9 @@ def index_view(request):
     return render(request, 'index.html')
 
 
-def production_view(request):
+def gallery_view(request):
 
-    return render(request, 'production.html')
-
-
-def artsy_view(request):
-
-    return render(request, 'artsy.html')
+    return render(request, 'gallery.html')
 
 
 def contact_view(request):
@@ -28,3 +23,8 @@ def contact_view(request):
 def artsy_latest_view(request):
 
     return render(request, 'artsy_latest.html')
+
+
+def production_latest_view(request):
+
+    return render(request, 'production_latest.html')
