@@ -1,3 +1,9 @@
+/* PREVENT DISPLAYING PAGE UNTIL LOADED */
+$(document).ready(function() {
+    document.getElementsByTagName("html")[0].style.visibility = "visible";
+  });
+
+/* NAVBAR CURRENT PAGE SETTING */
 $(function() {
     var url = window.location.href;
 
@@ -8,6 +14,8 @@ $(function() {
         }
     });
 });
+
+/* IMAGE MODALS */
 
 $(function() {
     $('.myImg').each(function() {
