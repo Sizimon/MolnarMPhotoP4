@@ -23,3 +23,8 @@ def artsy_view(request):
 def contact_view(request):
 
     return render(request, 'contact.html')
+
+
+def artsy_latest_view(request):
+
+    return render(request, 'artsy_latest.html')
