@@ -156,18 +156,6 @@ a {
     align-items: center;
 }
 
-.option-bg-img1 {
-    background-image: url(../img/people2.jpg);
-    background-position: center center;
-    background-size: cover;
-}
-
-.option-bg-img2 {
-    background-image: url(../img/other1.jpg);
-    background-position: center center;
-    background-size: cover;
-}
-
 .option-bg-img3 {
     background-image: url(../img/urban1.jpg);
     background-position: center center;
