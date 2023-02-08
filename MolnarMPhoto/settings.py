@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 import os
+import cloudinary
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
@@ -35,7 +36,7 @@ ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME'), 'localhost']
 
 # CLOUDINARY
 
-CLOUDINARY_URL = os.environ.get['CLOUDINARY_URL']
+CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
 
 
 # Application definition

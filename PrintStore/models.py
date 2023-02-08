@@ -9,5 +9,6 @@ FAVOURITE = ((0, 'Not Added'), (1, 'Added'))
 
 class favouriteImage(models.Model):
     # Image
-    featured_image = models.CloudinaryField('image')
+    featured_image = CloudinaryField('image')
+    # Favourite Status
     favourite = models.IntegerField(choices=FAVOURITE, default=0)
