@@ -33,6 +33,11 @@ DEBUG = True
 ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME'), 'localhost']
 
 
+# CLOUDINARY
+
+CLOUDINARY_URL = os.environ.get['CLOUDINARY_URL']
+
+
 # Application definition
 
 INSTALLED_APPS = [
