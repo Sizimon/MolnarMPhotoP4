@@ -15,7 +15,7 @@ $(function() {
     });
 });
 
-/* IMAGE MODALS */
+/* IMAGE MODALS and FAVOURITE FUNCTIONALITY */
 
 $(function() {
     $('.myImg').each(function() {
@@ -24,6 +24,14 @@ $(function() {
             $('#imgModal').attr('src', this.src)
             $('.navbar').css('display', 'none')
         })
+        /* Favourite image functionality */
+        /*
+        var favouriteImages = []
+        
+        imgSrc = $(this).attr('src', this.src);
+        $('#favourites-btn').click(function () {
+            favouriteImages.push(imgSrc)
+        }) */
     })
     $('.close').each(function() {
         $(this).click(function() {
@@ -32,3 +40,8 @@ $(function() {
         })
     })
 })
+/*
+favouriteImages.forEach(function() {
+    $('#favourites-gal').append(<img class='myImg'/>)
+})
+*/

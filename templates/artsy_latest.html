@@ -40,7 +40,7 @@
 <div id="myModal" class="modal text-center" tabindex="-1" role="dialog">
         <img class="modal-content" id="imgModal">
         {% if user.is_authenticated %}
-        <span>Add to favourites +</span>
+        <button id="favourites-btn" class="uppercase btn btn-primary overlay-btn">Add to Favourites</button>
         {% endif %}
         <span class="close">&times;</span>
 </div>

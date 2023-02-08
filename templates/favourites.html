@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<div class="container container-top-margin">
+
+
+    <h1 class="text-center">Latest Production</h1>
+    <div class="col-md-12">
+        <div class="row">
+            <hr>
+            <div id="favourites-gal" class="gal">
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- The Modal -->
+
+<div id="myModal" class="modal text-center" tabindex="-1" role="dialog">
+    <img class="modal-content" id="imgModal">
+    {% if user.is_authenticated %}
+    <button class="uppercase btn btn-primary overlay-btn">Remove from Favourites</button>
+    {% endif %}
+    <span class="close">&times;</span>
+</div>
+{% endblock %}
