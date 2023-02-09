@@ -113,7 +113,7 @@ a {
 /* MASTHEAD */
 
 .masthead {
-    background: linear-gradient(to bottom,rgba(22,22,22,.3) 0,rgba(22,22,22,.7) 75%,#161616 100%),url("static/img/main-image.webp");
+    background: linear-gradient(to bottom,rgba(22,22,22,.3) 0,rgba(22,22,22,.7) 75%,#161616 100%),url("../img/main-image.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
