@@ -157,13 +157,13 @@ a {
 }
 
 .option-bg-img1 {
-    background-image: url(../img/artsy-gallery/artsy7.webp);
+    background-image: url(https://res.cloudinary.com/daao8cm2f/image/upload/v1675898663/static/img/artsy-gallery/artsy7.f4e2bbd64221.webp);
     background-position: center center;
     background-size: cover;
 }
 
 .option-bg-img2 {
-    background-image: url(../img/urban2.webp);
+    background-image: url(https://res.cloudinary.com/daao8cm2f/image/upload/v1675898693/static/img/urban2.803202a4c910.webp);
     background-position: center center;
     background-size: cover;
 }
