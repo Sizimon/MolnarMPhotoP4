@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from django.views import generic
+from .models import Photos
+
 
 # Create your views here.
 
@@ -28,3 +31,9 @@ def artsy_latest_view(request):
 def production_latest_view(request):
 
     return render(request, 'production_latest.html')
+
+
+class favourite_images_list(generic.ListView):
+    model = Photos
+    favourite_image = Photo.object.filter(favourite=1)
+    template_name = 'favourites.html'
