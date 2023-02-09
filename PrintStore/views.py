@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views import generic
+from django.views import generic, View
 from .models import Photos
 
 
@@ -35,4 +35,5 @@ def production_latest_view(request):
 
 class favourite_images_list(generic.ListView):
     model = Photos
-    # favourite_image = Photos.object.filter(favourite=1)
+    queryset = Photos.objects.filter(favourite=1)
+    template_name = 'favourites.html'

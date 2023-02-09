@@ -1,3 +1,4 @@
+from . import views
 from django.contrib import admin
 from django.urls import path
 
@@ -10,5 +11,5 @@ urlpatterns = [
     path('contact', contact_view, name='contact'),
     path('artsy-latest', artsy_latest_view, name='artsy-latest'),
     path('production-latest', production_latest_view, name='production-latest'),
-    path('favourites', favourite_images_list, name='favourites')
+    path('favourites', views.favourite_images_list.as_view(), name='favourites')
 ]

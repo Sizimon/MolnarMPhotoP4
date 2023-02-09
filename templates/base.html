@@ -36,7 +36,7 @@
           </li>
           {% if user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#">favourites.</a>
+            <a class="nav-link js-scroll-trigger" href="{% url 'favourites' %}">favourites.</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="{% url 'account_logout' %}">logout.</a>
