@@ -113,7 +113,7 @@ a {
 /* MASTHEAD */
 
 .masthead {
-    background: linear-gradient(to bottom,rgba(22,22,22,.3) 0,rgba(22,22,22,.7) 75%,#161616 100%),url("../img/main-image.webp");
+    background: linear-gradient(to bottom,rgba(22,22,22,.3) 0,rgba(22,22,22,.7) 75%,#161616 100%),url("https://res.cloudinary.com/daao8cm2f/image/upload/v1675898696/static/img/main-image.ffcb4c7f21c3.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
