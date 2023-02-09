@@ -37,4 +37,4 @@ class favourite_images_list(generic.ListView):
     model = Photos
     queryset = Photos.objects.filter(favourite=1)
     template_name = 'favourites.html'
-    context_object_name = 'photo'
+    context_object_name = 'photos'
