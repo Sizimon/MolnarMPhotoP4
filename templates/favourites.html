@@ -13,7 +13,7 @@
             {% else %}
             <div id="favourites-gal" class="gal">
             {% for photo in photos %}
-                <img class="myImg" src="{% url 'photo.featured_image' %}" alt="">
+                <img class="myImg" src="{{{ photo.image.url }}" alt="">
             {% endfor %}
             </div>
             {% endif %}
