@@ -35,5 +35,4 @@ def production_latest_view(request):
 
 class favourite_images_list(generic.ListView):
     model = Photos
-    favourite_image = Photos.object.filter(favourite=1)
-    template_name = 'favourites.html'
+    # favourite_image = Photos.object.filter(favourite=1)
