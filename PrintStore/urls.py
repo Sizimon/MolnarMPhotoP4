@@ -11,5 +11,5 @@ urlpatterns = [
     path('contact', contact_view, name='contact'),
     path('artsy-latest', artsy_latest_view, name='artsy-latest'),
     path('production-latest', production_latest_view, name='production-latest'),
-    path('favourites', views.favourite_images_list.as_view(), name='favourites')
+    path('favourites', views.favourite_images_list.as_view, name='favourites')
 ]

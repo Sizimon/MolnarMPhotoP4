@@ -14,3 +14,21 @@ class Photos(models.Model):
     featured_image = CloudinaryField('image', default='placeholder')
     # Favourite Status
     favourite = models.IntegerField(choices=FAVOURITE, default=0)
+
+
+class ArtsyPhotos(models.Model):
+    # Slug
+    slug = models.SlugField(max_length=200, unique=True)
+    # Image
+    featured_image = CloudinaryField('image', default='placeholder')
+    # Favourite Status
+    favourite = models.IntegerField(choices=FAVOURITE, default=0)
+
+
+class ProductionPhotots(models.Model):
+    # Slug
+    slug = models.SlugField(max_length=200, unique=True)
+    # Image
+    featured_image = CloudinaryField('image', default='placeholder')
+    # Favourite Status
+    favourite = models.IntegerField(choices=FAVOURITE, default=0)
