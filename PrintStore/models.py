@@ -25,7 +25,7 @@ class ArtsyPhotos(models.Model):
     favourite = models.IntegerField(choices=FAVOURITE, default=0)
 
 
-class ProductionPhotots(models.Model):
+class ProductionPhotos(models.Model):
     # Slug
     slug = models.SlugField(max_length=200, unique=True)
     # Image
