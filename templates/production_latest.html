@@ -9,29 +9,9 @@
         <div class="row">
             <hr>
             <div class="gal">
-                <img class="myImg" src="{% static 'img/production-gallery/production1.webp' %}" alt="">
-
-                <img class="myImg" src="{% static 'img/production-gallery/production2.webp' %}" alt="">
-
-                <img class="myImg" src="{% static 'img/production-gallery/production3.webp' %}" alt="">
-
-                <img class="myImg" src="{% static 'img/production-gallery/production4.webp' %}" alt="">
-                <img class="myImg" src="{% static 'img/production-gallery/production5.webp' %}" alt="">
-
-
-
-                <img class="myImg" src="{% static 'img/production-gallery/production6.webp' %}" alt="">
-                <img class="myImg" src="{% static 'img/production-gallery/production7.webp' %}" alt="">
-                <img class="myImg" src="{% static 'img/production-gallery/production8.webp' %}" alt="">
-                <img class="myImg" src="{% static 'img/production-gallery/production9.webp' %}" alt="">
-                <img class="myImg" src="{% static 'img/production-gallery/production10.webp' %}" alt="">
-
-                <img class="myImg" src="{% static 'img/production-gallery/production11.webp' %}" alt="">
-
-                <img class="myImg" src="{% static 'img/production-gallery/production12.webp' %}" alt="">
-
-                <img class="myImg" src="{% static 'img/production-gallery/production13.webp' %}" alt="">
-                <img class="myImg" src="{% static 'img/production-gallery/production14.webp' %}" alt="">
+                {% for photo in ProductionPhotos %}
+                    <img class="myImg" src={{photo.featured_image.url}} alt="">
+                {% endfor %}
             </div>
         </div>
     </div>

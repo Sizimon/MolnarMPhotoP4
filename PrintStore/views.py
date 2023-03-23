@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import generic, View
-from .models import Photos
+from .models import Photos, ProductionPhotos, ArtsyPhotos
 
 
 # Create your views here.
@@ -23,14 +23,18 @@ def contact_view(request):
     return render(request, 'contact.html')
 
 
-def artsy_latest_view(request):
+class artsy_images_list(generic.ListView):
+    model = ArtsyPhotos
+    queryset = ArtsyPhotos.objects.all()
+    template_name = 'artsy_latest.html'
+    context_object_name = 'ArtsyPhotos'
 
-    return render(request, 'artsy_latest.html')
 
-
-def production_latest_view(request):
-
-    return render(request, 'production_latest.html')
+class production_images_list(generic.ListView):
+    model = ProductionPhotos
+    queryset = ProductionPhotos.objects.all()
+    template_name = 'production_latest.html'
+    context_object_name = 'ProductionPhotos'
 
 
 class favourite_images_list(generic.ListView):
