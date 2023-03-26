@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.http import HttpResponseRedirect
 from .models import Photos, ProductionPhotos, ArtsyPhotos
 
 
@@ -39,6 +40,19 @@ class production_images_list(generic.ListView):
 
 class favourite_images_list(generic.ListView):
     model = Photos
-    queryset = Photos.objects.filter(favourite=1)
+    queryset = Photos.objects.filter(favourite=True)
     template_name = 'favourites.html'
     context_object_name = 'photos'
+
+
+class PhotoFavourite(View):
+    
+    def photo(self, request, slug):
+        photo = get_object_or_404(Photo, slug=slug)
+
+        if photo.favourite.filter(id=request.user.id).exists():
+            photo.favourite.remove(request.user)
+        else:
+            photo.favourite.add(request.user)
+        
+        return HttpResponseRedirect(reverse('favourite_images_list', args=[slug]))
