@@ -20,14 +20,16 @@ $(function() {
 $(function() {
     $('.myImg').each(function() {
         $(this).click(function() {
-            $('#myModal').css('display', 'block')
-            $('#imgModal').attr('src', this.src)
+            let modal = document.getElementById(this.nextElementSibling.id)
+            $(modal).css('display', 'block')
+            $(modal.firstElementChild).attr('src', this.src)
             $('.navbar').css('display', 'none')
         })
     })
     $('.close').each(function() {
         $(this).click(function() {
-            $('#myModal').css('display', 'none')
+            let modal = document.getElementById(this.parentElement.id)
+            $(modal).css('display', 'none')
             $('.navbar').css('display', 'flex')
         })
     })

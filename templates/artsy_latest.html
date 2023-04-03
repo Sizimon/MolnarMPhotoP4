@@ -11,6 +11,20 @@
             <div class="gal">
                 {% for photo in ArtsyPhotos %}
                     <img class="myImg" src={{photo.featured_image.url}} alt="">
+                    <div id="myModal_{{photo.slug}}" class="modal text-center" tabindex="-1" role="dialog">
+                        <img class="modal-content" id="imgModal_{{photo.slug}}">
+                        {% if user.is_authenticated %}
+                        <form class="d-inline" action="{% url 'artsy_favourite' photo.slug %}" method="POST">
+                            {% csrf_token %}
+                            {% if favourited %}
+                            <button id="favourites-btn" type="submit" name="favourite" value="{{photo.slug}}" class="uppercase btn btn-primary overlay-btn">Remove From Favourites</button>
+                            {% else %}
+                            <button id="favourites-btn" type="submit" name="favourite" value="{{photo.slug}}" class="uppercase btn btn-primary overlay-btn">Add To Favourites</button>
+                            {% endif %}
+                        {% endif %}
+                        </form>
+                        <span class="close">&times;</span>
+                </div>
                 {% endfor %}
             </div>
         </div>
@@ -18,11 +32,18 @@
 </div>
 <!-- The Modal -->
 
-<div id="myModal" class="modal text-center" tabindex="-1" role="dialog">
+<!-- <div id="myModal" class="modal text-center" tabindex="-1" role="dialog">
         <img class="modal-content" id="imgModal">
         {% if user.is_authenticated %}
-        <button id="favourites-btn" class="uppercase btn btn-primary overlay-btn">Add to Favourites</button>
+        <form class="d-inline" action="" method="POST">
+            {% csrf_token %}
+            {% if favourited %}
+            <button id="favourites-btn" type="submit" name="favourite" value="{{photo.slug}}" class="uppercase btn btn-primary overlay-btn">Remove From Favourites</button>
+            {% else %}
+            <button id="favourites-btn" type="submit" name="favourite" value="{{photo.slug}}" class="uppercase btn btn-primary overlay-btn">Add To Favourites</button>
+            {% endif %}
         {% endif %}
+        </form>
         <span class="close">&times;</span>
-</div>
+</div> -->
 {% endblock %}

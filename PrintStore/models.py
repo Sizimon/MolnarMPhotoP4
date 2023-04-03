@@ -4,7 +4,7 @@ from cloudinary.models import CloudinaryField
 
 # Create your models here.
 
-FAVOURITE = ((False, 'Not Added'), (True, 'Added'))
+# FAVOURITE = ((False, 'Not Added'), (True, 'Added'))
 
 
 class Photos(models.Model):
@@ -13,7 +13,8 @@ class Photos(models.Model):
     # Image
     featured_image = CloudinaryField('image', default='placeholder')
     # Favourite Status
-    favourite = models.IntegerField(choices=FAVOURITE, default=False)
+    favourite = models.ManyToManyField(
+        User, related_name='favourited_photos', blank=True)
 
 
 class ArtsyPhotos(models.Model):
@@ -22,7 +23,8 @@ class ArtsyPhotos(models.Model):
     # Image
     featured_image = CloudinaryField('image', default='placeholder')
     # Favourite Status
-    favourite = models.IntegerField(choices=FAVOURITE, default=False)
+    favourite = models.ManyToManyField(
+        User, related_name='artsy_photos', blank=True)
 
 
 class ProductionPhotos(models.Model):
@@ -31,4 +33,6 @@ class ProductionPhotos(models.Model):
     # Image
     featured_image = CloudinaryField('image', default='placeholder')
     # Favourite Status
-    favourite = models.IntegerField(choices=FAVOURITE, default=False)
+    favourite = models.ManyToManyField(
+        User, related_name='production_photos', blank=True)
+    # favourite = models.IntegerField(choices=FAVOURITE, default=False)

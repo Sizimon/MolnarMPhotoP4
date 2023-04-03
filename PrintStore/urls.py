@@ -2,8 +2,8 @@ from . import views
 from django.contrib import admin
 from django.urls import path
 
-# importing views from views..py
-from .views import index_view, gallery_view, contact_view, artsy_images_list, production_images_list, favourite_images_list
+# importing views from views.py
+from .views import index_view, gallery_view, contact_view, artsy_images_list, production_images_list, favourite_images_list, ArtsyFavourite
 
 urlpatterns = [
     path('', index_view, name='index'),
@@ -12,4 +12,5 @@ urlpatterns = [
     path('artsy-latest', views.artsy_images_list.as_view(), name='artsy-latest'),
     path('production-latest', views.production_images_list.as_view(), name='production-latest'),
     path('favourites', views.favourite_images_list.as_view(), name='favourites'),
+    path('favourite/<slug:slug>', views.ArtsyFavourite.as_view(), name='artsy_favourite'),
 ]
