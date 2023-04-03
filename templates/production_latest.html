@@ -11,18 +11,24 @@
             <div class="gal">
                 {% for photo in ProductionPhotos %}
                     <img class="myImg" src={{photo.featured_image.url}} alt="">
+                    <!-- The Modal -->
+                    <div id="myModal_{{photo.slug}}" class="modal text-center" tabindex="-1" role="dialog">
+                        <img class="modal-content" id="imgModal_{{photo.slug}}">
+                        {% if user.is_authenticated %}
+                        <form class="d-inline" action="{% url 'production_favourite' photo.slug %}" method="POST">
+                            {% csrf_token %}
+                            {% if favourited %}
+                            <button id="favourites-btn" type="submit" name="favourite" value="{{photo.slug}}" class="uppercase btn btn-primary overlay-btn">Remove From Favourites</button>
+                            {% else %}
+                            <button id="favourites-btn" type="submit" name="favourite" value="{{photo.slug}}" class="uppercase btn btn-primary overlay-btn">Add To Favourites</button>
+                            {% endif %}
+                        {% endif %}
+                        </form>
+                        <span class="close">&times;</span>
+                    </div>
                 {% endfor %}
             </div>
         </div>
     </div>
-</div>
-<!-- The Modal -->
-
-<div id="myModal" class="modal text-center" tabindex="-1" role="dialog">
-    <img class="modal-content" id="imgModal">
-    {% if user.is_authenticated %}
-    <span>Add to favourites +</span>
-    {% endif %}
-    <span class="close">&times;</span>
 </div>
 {% endblock %}
